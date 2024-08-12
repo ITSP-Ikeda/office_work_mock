@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Parking usage histories</h1>
+
+<div id="parking_usage_histories">
+  <% @parking_usage_histories.each do |parking_usage_history| %>
+    <%= render parking_usage_history %>
+    <p>
+      <%= link_to "Show this parking usage history", parking_usage_history %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New parking usage history", new_parking_usage_history_path %>
