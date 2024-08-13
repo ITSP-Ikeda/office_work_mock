@@ -18,8 +18,8 @@
 
   <div>
     <%= form.label :payment_destination_id, style: "display: block" %>
-    <%= form.number_field :payment_destination_id %>
-  </div>
+    <%= form.collection_select :payment_destination_id, PaymentDestination.all, :id, :payment_destination_name %>
+    </div>
 
   <div>
     <%= form.submit %>

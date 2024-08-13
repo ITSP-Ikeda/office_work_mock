@@ -4,6 +4,7 @@ class CreateParkingUsageHistories < ActiveRecord::Migration[7.1]
       t.integer :year
       t.integer :month
       t.integer :parking_area_id
+      t.integer :parking_user_id
       t.integer :amount
 
       t.timestamps

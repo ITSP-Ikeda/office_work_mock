@@ -1,21 +1,21 @@
 <div id="<%= dom_id payment %>">
   <p>
-    <strong>Payment destination:</strong>
-    <%= payment.payment_destination %>
+    <strong>支払い先名:</strong>
+    <%= PaymentDestination.find(payment.payment_destination).payment_destination_name %>
   </p>
 
   <p>
-    <strong>Year:</strong>
+    <strong>年:</strong>
     <%= payment.year %>
   </p>
 
   <p>
-    <strong>Month:</strong>
+    <strong>月:</strong>
     <%= payment.month %>
   </p>
 
   <p>
-    <strong>Amount:</strong>
+    <strong>金額:</strong>
     <%= payment.amount %>
   </p>
 

@@ -1,12 +1,12 @@
 <div id="<%= dom_id parking %>">
   <p>
-    <strong>Parking name:</strong>
+    <strong>駐車場名:</strong>
     <%= parking.parking_name %>
   </p>
 
   <p>
-    <strong>Payment destination:</strong>
-    <%= parking.payment_destination_id %>
+    <strong>支払い先名:</strong>
+    <%= PaymentDestination.find(parking.payment_destination_id).payment_destination_name %>
   </p>
 
 </div>

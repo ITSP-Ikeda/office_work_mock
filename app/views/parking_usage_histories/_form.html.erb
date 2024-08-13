@@ -23,7 +23,12 @@
 
   <div>
     <%= form.label :parking_area_id, style: "display: block" %>
-    <%= form.number_field :parking_area_id %>
+    <%= form.collection_select :parking_area_id, ParkingArea.all, :id, :parking_area_name %>
+  </div>
+
+  <div>
+    <%= form.label :parking_user_id, style: "display: block" %>
+    <%= form.collection_select :parking_user_id, ParkingUser.all, :id, :parking_user_name %>
   </div>
 
   <div>

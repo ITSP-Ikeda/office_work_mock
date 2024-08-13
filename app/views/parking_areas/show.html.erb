@@ -3,8 +3,8 @@
 <%= render @parking_area %>
 
 <div>
-  <%= link_to "Edit this parking area", edit_parking_area_path(@parking_area) %> |
-  <%= link_to "Back to parking areas", parking_areas_path %>
+  <%= link_to "駐車場区画を修正", edit_parking_area_path(@parking_area) %> |
+  <%= link_to "駐車場区画一覧へ戻る", parking_areas_path %>
 
-  <%= button_to "Destroy this parking area", @parking_area, method: :delete %>
+  <%= button_to "駐車場区画を削除する", @parking_area, method: :delete %>
 </div>

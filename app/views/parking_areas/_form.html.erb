@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :parking_id, style: "display: block" %>
-    <%= form.number_field :parking_id %>
+    <%= form.collection_select :parking_id, Parking.all, :id, :parking_name %>
   </div>
 
   <div>

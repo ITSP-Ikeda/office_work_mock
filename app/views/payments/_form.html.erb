@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :payment_destination, style: "display: block" %>
-    <%= form.number_field :payment_destination %>
+    <%= form.collection_select :payment_destination, PaymentDestination.all, :id, :payment_destination_name %>
   </div>
 
   <div>

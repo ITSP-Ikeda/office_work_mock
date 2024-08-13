@@ -1,21 +1,26 @@
 <div id="<%= dom_id parking_usage_history %>">
   <p>
-    <strong>Year:</strong>
+    <strong>年:</strong>
     <%= parking_usage_history.year %>
   </p>
 
   <p>
-    <strong>Month:</strong>
+    <strong>月:</strong>
     <%= parking_usage_history.month %>
   </p>
 
   <p>
-    <strong>Parking area:</strong>
-    <%= parking_usage_history.parking_area_id %>
+    <strong>駐車場区画名:</strong>
+    <%= ParkingArea.find(parking_usage_history.parking_area_id).parking_area_name %>
+    </p>
+
+  <p>
+    <strong>駐車場使用者名:</strong>
+    <%= ParkingArea.find(parking_usage_history.parking_area_id).parking_user_name %>
   </p>
 
   <p>
-    <strong>Amount:</strong>
+    <strong>金額:</strong>
     <%= parking_usage_history.amount %>
   </p>
 

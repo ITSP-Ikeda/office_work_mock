@@ -8,7 +8,7 @@ ja:
           has_many: "%{record}が存在しているので削除できません。"
         input_error: '入力エラーがあります。'          
     models:
-      user: ユーザ
+      payment: 支払い
       customer: 取引先
       delivery_slip: 納品書
       merchandise: 商品
@@ -24,8 +24,31 @@ ja:
         product_number: '品番を選択してください'
         stock: 商品選択
     attributes:
-      xxxx:
-        yyyy: ログインID
+      payment:
+        payment_destination: 支払い先
+        year: 年
+        month: 月
+        amount: 金額
+      payment_destination:
+        payment_destination_name: 支払い先名
+        year: 年
+        institution: 支払い先機関名
+        account_number: 口座番号
+      parking_usage_history:
+        year: 年
+        month: 月
+        parking_area_id: 駐車場区画名
+        parking_user_id: 駐車場使用者名
+        amount: 金額
+      parking:
+        parking_name: 駐車場名
+        payment_destination_id: 支払い先名
+      parking_area:
+        parking_area_name: 駐車場区画名
+        parking_id: 駐車場名
+      parking_user:
+        parking_user_name: 駐車場使用者名
+        remark: 備考
       
   attributes:
     created_at: 登録日時

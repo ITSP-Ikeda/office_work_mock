@@ -3,8 +3,8 @@
 <%= render @parking %>
 
 <div>
-  <%= link_to "Edit this parking", edit_parking_path(@parking) %> |
-  <%= link_to "Back to parkings", parkings_path %>
+  <%= link_to "駐車場を修正する", edit_parking_path(@parking) %> |
+  <%= link_to "駐車場一覧に戻る", parkings_path %>
 
-  <%= button_to "Destroy this parking", @parking, method: :delete %>
+  <%= button_to "駐車場を削除する", @parking, method: :delete %>
 </div>

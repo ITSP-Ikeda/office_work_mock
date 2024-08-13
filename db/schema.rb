@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_12_035058) do
     t.integer "year"
     t.integer "month"
     t.integer "parking_area_id"
+    t.integer "parking_user_id"
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
