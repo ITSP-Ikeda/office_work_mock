@@ -65,6 +65,6 @@ class ParkingUsageHistoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def parking_usage_history_params
-      params.require(:parking_usage_history).permit(:year, :month, :parking_area_id, :amount)
+      params.require(:parking_usage_history).permit(:year, :month, :parking_area_id, :parking_user_id, :amount)
     end
 end
