@@ -1,6 +1,26 @@
 #!/bin/sh
 
 set -e
+
+wait_for_postgres() {
+  echo "PostgreSQL の起動を待機中..."
+  i=0
+  max=30
+  while [ "$i" -lt "$max" ]; do
+    if ruby -rsocket -e "TCPSocket.new('db', 5432).close" 2>/dev/null; then
+      echo "PostgreSQL に接続可能"
+      return 0
+    fi
+    i=$((i + 1))
+    echo "  待機中 (${i}/${max})..."
+    sleep 2
+  done
+  echo "PostgreSQL (db:5432) に接続できませんでした"
+  exit 1
+}
+
+wait_for_postgres
+
 # 下記処理は別ファイルに記載するのがあるべき姿なので、ゆくゆくは修正したい
 while true; do
   if rails db:version >/dev/null 2>&1; then
